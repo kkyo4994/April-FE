@@ -1,7 +1,12 @@
 import React from "react";
+import RootRouter from "./route";
 
 function App() {
-  return <div>오</div>;
+  return (
+    <>
+      <RootRouter />
+    </>
+  );
 }
 
 export default App;
