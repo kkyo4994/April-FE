@@ -1,1 +1,1 @@
-export {};
+export { default as MainBackground } from "./MainBackground.svg"
