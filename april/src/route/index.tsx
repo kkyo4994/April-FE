@@ -1,12 +1,14 @@
 import React, { Suspense } from "react";
-import { BrowserRouter } from "react-router-dom";
-const MainRouter = React.lazy(() => import("./MainRouter"));
+import { Route, Routes,BrowserRouter } from "react-router-dom";
+import MainContainer from "../container/Main";
 
 const RootRouter = (): JSX.Element => {
   return (
     <BrowserRouter>
       <Suspense fallback={<div>Loading..</div>}>
-        <MainRouter />
+        <Routes>
+          <Route path="/" element={<MainContainer />} />
+        </Routes>
       </Suspense>
     </BrowserRouter>
   );
