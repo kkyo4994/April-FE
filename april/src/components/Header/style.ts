@@ -11,7 +11,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`  
 margin: 0 auto;
-width: 70%;
+width: 75%;
 margin-top: 10px;
 height: 70%;
 display: flex;
@@ -30,7 +30,6 @@ span{
 }`
 
 export const BorderImg = styled.div`
-height: 10%;
 img{
     width: 100%;
 }
