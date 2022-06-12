@@ -6,7 +6,6 @@ width: 75%;
 min-height: 720px;
 margin: 0 auto;
 margin-top: 70px;
-border:1px solid red;
 `
 
 export const Input = styled.input`
