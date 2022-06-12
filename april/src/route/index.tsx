@@ -11,7 +11,9 @@ const RootRouter = (): JSX.Element => {
         <Routes>
           <Route path="/" element={<MainContainer />} />
           <Route path="write" element={<WirteContainer />} />
-          <Route path="view/:date`" element={<ViewContainer />} />
+          {/* <Route path="view/:date`" element={<ViewContainer />} />*/}
+          <Route path="view" element={<ViewContainer />} /> 
+       
         </Routes>
       </Suspense>
     </BrowserRouter>
