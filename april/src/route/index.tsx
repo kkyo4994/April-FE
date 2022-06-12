@@ -9,7 +9,7 @@ const RootRouter = (): JSX.Element => {
       <Suspense fallback={<div>Loading..</div>}>
         <Routes>
           <Route path="/" element={<MainContainer />} />
-          <Route path="wirte" element={<WirteContainer />} />
+          <Route path="write" element={<WirteContainer />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
