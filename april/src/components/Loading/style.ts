@@ -9,14 +9,12 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.div`
-  font: ${({ theme }) => theme.fonts.h1};
-  color: ${({ theme }) => theme.colors.grayscale.black};
+  color: black;
   text-align: center;
   margin-bottom: 16px;
 `;
 
 export const Description = styled.div`
-  font: ${({ theme }) => theme.fonts.subtitle1};
-  color: ${({ theme }) => theme.colors.grayscale.gray1};
+  color: gray;
   text-align: center;
 `;
