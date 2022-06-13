@@ -12,12 +12,6 @@ export const request = axios.create({
   timeout: 100000,
 });
 
-const getDateWithAddHour = (hour: number) => {
-  const date = new Date();
-  date.setHours(date.getHours() + hour);
-  return date;
-};
-
 export const refresh = async (
   config: AxiosRequestConfig
 ): Promise<AxiosRequestConfig> => {
@@ -42,5 +36,6 @@ export const refresh = async (
   }
   config.headers!["Authorization"] = `${access_token}`;
 
+  console.log(access_token);
   return config;
 };
