@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useWriteLetter } from "../../queries/Letter";
 import * as S from "./style"
 
@@ -8,6 +9,17 @@ const Write = () => {
   const [letterFeeling, setLetterFeeling] = useState("");
   const [letterContent, setLetterContent] = useState("");
   const [letterSong, setLetterSong] = useState("");
+  const navigate = useNavigate();
+
+  const onWriteError = () => {
+    alert("편지 작성이 실패했습니다. 다시 시도해 주세요");
+    window.location.replace("/");
+  }
+
+  const onWriteSuccess = () => {
+    alert("편지 작성이 완료되었습니다!");
+    navigate("/view");
+  }
 
   const onClickWriteBtn = () => {
     writeMutation.mutate(
@@ -16,6 +28,10 @@ const Write = () => {
         feeling: letterFeeling,
         song: letterSong,
         content: letterContent,
+      },
+      {
+        onError : onWriteError,
+        onSuccess: onWriteSuccess,
       }
     )
   }
